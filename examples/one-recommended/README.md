@@ -4,12 +4,6 @@ Welcome to One!
 
 ## Setup
 
-Set up your `.env` file first:
-
-```bash
-cp .env.default .env
-```
-
 Now you'll need to run a postgres database. We've included a `docker-compose.yml`
 that will set up everything for you, you'll want to set up docker first though:
 
@@ -24,10 +18,8 @@ docker-compose up
 
 And have your database come online.
 
-Ensure your `DATABASE_URL` set in a .env file and points to a running Postgres database and then run your database migrations and seeding:
-
 ```bash
-yarn db:init
+yarn db:init # or npm run, bun run, pnpm run
 ```
 
 ## Developing
@@ -35,7 +27,7 @@ yarn db:init
 You can now run your One app in development:
 
 ```bash
-yarn dev
+yarn dev # or npm run, bun run, pnpm run
 ```
 
 ## Production
@@ -45,7 +37,7 @@ To build your app for production:
 ### Web
 
 ```bash
-yarn build:web
+yarn build:web # or npm run, bun run, pnpm run
 ```
 
 ### iOS
@@ -53,7 +45,7 @@ yarn build:web
 First, you'll need to generate the native code for your app:
 
 ```bash
-yarn prebuild:native
+yarn prebuild:native # or npm run, bun run, pnpm run
 ```
 
 Afterward, follow the instructions printed in the terminal to build and upload your iOS app for distribution.
